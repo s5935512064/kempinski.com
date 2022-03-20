@@ -75,7 +75,7 @@ const Nav = () => {
               </div>
             </div>
 
-            <Disclosure.Panel className="md:hidden my-5 h-screen ">
+            <Disclosure.Panel className="md:hidden my-5 h-[80vh] ">
               <div className="px-2 pt-2 pb-3 space-y-1 ">
                 {navigation.map((item) => (
                   <Disclosure.Button

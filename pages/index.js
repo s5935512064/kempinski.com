@@ -6,6 +6,12 @@ const news = [
   { name: "2", href: "#", current: false },
   { name: "3", href: "#", current: false },
   { name: "4", href: "#", current: false },
+  { name: "5", href: "#", current: false },
+  { name: "6", href: "#", current: false },
+  { name: "7", href: "#", current: false },
+  { name: "8", href: "#", current: false },
+  { name: "9", href: "#", current: false },
+  { name: "10", href: "#", current: false },
 ];
 
 export default function Home() {
@@ -31,49 +37,60 @@ export default function Home() {
         </video>
       </div>
       <div className="relative  min-h-full  min-w-full w-auto h-auto pt-[50%] xl:pt-[30%]">
-        <div className="bg-[#010F2A]  p-8 ">
-          <div className="relative flex overflow-x-hidden text-white">
-            <div className="py-12 animate-marquee whitespace-nowrap">
-              <span className="text-4xl mx-4">Marquee Item 1</span>
-              <span className="text-4xl mx-4">Marquee Item 2</span>
-              <span className="text-4xl mx-4">Marquee Item 3</span>
-              <span className="text-4xl mx-4">Marquee Item 4</span>
-              <span className="text-4xl mx-4">Marquee Item 5</span>
+        {/* nesupdate */}
+        <div className="bg-[#010F2A]  md:p-8 ">
+          <div className="relative flex overflow-x-hidden text-white space-x-4">
+            <div className="py-8 animate-marquee whitespace-nowrap space-x-4 flex flex-row">
+              {news.map((item) => (
+                <div className="bg-white w-48 h-48 rounded-md items-center text-black justify-center flex">
+                  {item.name}
+                </div>
+              ))}
             </div>
 
-            <div className="absolute top-0 py-12 animate-marquee2 whitespace-nowrap">
-              <span className="text-4xl mx-4">Marquee Item 1</span>
-              <span className="text-4xl mx-4">Marquee Item 2</span>
-              <span className="text-4xl mx-4">Marquee Item 3</span>
-              <span className="text-4xl mx-4">Marquee Item 4</span>
-              <span className="text-4xl mx-4">Marquee Item 5</span>
+            <div className="absolute top-0 py-8 animate-marquee2 whitespace-nowrap flex flex-row space-x-4">
+              {news.map((item) => (
+                <div className="bg-white w-48 h-48 rounded-md items-center text-black justify-center flex">
+                  {item.name}
+                </div>
+              ))}
             </div>
           </div>
         </div>
-        <div className="bg-red-500 m-4  p-4 ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-          voluptate minus. Repellendus totam, reiciendis ipsa, praesentium iusto
-          ipsam officia maiores aspernatur at explicabo placeat atque labore
-          perspiciatis odio magni fugit fugiat expedita alias veritatis
-          laboriosam. Excepturi fuga velit veniam sunt at? Unde beatae
-          voluptatem nulla similique, quaerat facilis sint harum aspernatur sed
-          laborum vero quasi quas praesentium nemo deleniti ad quod repudiandae
-          corporis. Nihil animi, laborum magnam impedit recusandae reprehenderit
-          doloremque est? Optio non obcaecati tenetur voluptas cumque magni
-          repellat, corporis culpa nemo error quis perferendis reiciendis
-          consequuntur temporibus quaerat magnam, aperiam sit animi. Dolor
-          tempora beatae unde distinctio, maiores sequi temporibus obcaecati
-          blanditiis architecto esse expedita qui tenetur vel atque commodi
-          ducimus at iusto ab amet earum! Voluptates libero soluta odit sapiente
-          temporibus, molestias provident facilis non magnam dignissimos quod
-          quaerat, debitis nisi architecto tempora repudiandae? Magni deleniti
-          laborum, excepturi sit laboriosam qui sint cumque mollitia accusamus
-          recusandae pariatur doloremque velit voluptatem vero est voluptatum
-          similique tempore aperiam cum voluptatibus, delectus ullam expedita
-          quisquam sequi! Eos asperiores sunt aliquam eaque quod eligendi illo
-          blanditiis omnis quisquam, debitis aliquid ipsa, totam ducimus, optio
-          voluptate repellat ratione officia. Deleniti, recusandae. Iure impedit
-          repudiandae magnam commodi voluptas minus sequi corrupti vero quod?
+        {/* manifesto */}
+        <div className="items-center flex bg-[#F5F1EA] overflow-hidden">
+          <img
+            className="object-none  w-full object-left-top scale-x-[-1] h-96 md:h-screen "
+            src="/manifestobg.png"
+            alt=""
+          />
+          <div className="pl-16 md:pl-96 font-bold text-3xl absolute flex flex-col space-y-5">
+            <p className="text-[#B6A694]">our manifesto</p>
+            <button
+              type="button"
+              class="text-[#B6A694] hover:text-white border border-[#B6A694] hover:bg-[#B6A694] focus:ring-4 focus:ring-[#B6A694] font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-[#B6A694] dark:text-[#B6A694] dark:hover:text-white dark:hover:bg-[#B6A694] dark:focus:ring-yellow-900"
+            >
+              Click
+            </button>
+          </div>
+        </div>
+        {/* masterplan */}
+        <div className="justify-center flex  overflow-hidden">
+          <img
+            className="object-cover w-full h-96 md:h-screen "
+            src="/lounge.jpg"
+            alt=""
+          />
+          <div className="font-bold text-md absolute flex flex-col space-y-5 text-center p-5 md:p-56 bg-black bg-opacity-25  ">
+            <p className="text-white">WE BELIEVE IN</p>
+            <p className="text-white text-5xl">Timeless</p>
+            <button
+              type="button"
+              class="text-white hover:text-white border border-white hover:bg-white focus:ring-4 focus:ring-white font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-white dark:focus:ring-yellow-900"
+            >
+              Click
+            </button>
+          </div>
         </div>
       </div>
     </>
